@@ -5,5 +5,5 @@ export interface Compradores {
     direccion:string;
     localidad:string;
     email:string;
-    telefono:number;
+    telefono:string;
 }

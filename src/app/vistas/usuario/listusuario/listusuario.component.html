@@ -1,1 +1,21 @@
-<p>listusuario works!</p>
+<div class="container" align="center">
+    <div class="row">
+      <div class="col-6 offset-3"><br/>
+        <h3>LISTADO DE USUARIOS</h3> 
+ <table class="table table-bordered">
+    <tr>
+        <th>Username</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Teléfono</th>
+    </tr>
+    <tr *ngFor="let linea of usuario">
+        <td>{{linea.username}}</td>
+        <td>{{linea.nombre}}</td>
+        <td>{{linea.apellidos}}</td>
+        <td>{{linea.telefono}}</td>
+    </tr>
+</table>
+  </div>
+  </div>
+  </div>

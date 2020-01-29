@@ -1,1 +1,54 @@
-<p>altamascota works!</p>
+<div class="container" align="center">
+    <div class="row">
+      <div class="col-6 offset-3">
+    <h2>ALTA DE NUEVA MASCOTA</h2>
+    <form (submit)="altamascota()" #formu="ngForm">
+    <div align="left">
+    <label for="nombre">Nombre:</label>
+    </div>
+    <input class="form-control" type="text" autocomplete="off" name="nombre" id="nombre" required 
+            maxlength="30" [(ngModel)]="mascota.nombre" #nombre="ngModel">
+    <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf="nombre.errors.required">
+        El nombre es obligatorio
+        </div>
+        <div *ngIf="nombre.errors.maxlength">
+          No puede contener más de 30 caracteres
+        </div>
+    </div>
+    <div align="left">
+    <label for="tipo">Tipo de mascota:</label>
+    </div>
+    <input class="form-control" type="text" autocomplete="off" name="tipo" id="tipo" 
+            maxlength="30" required [(ngModel)]="mascota.tipo" #tipo="ngModel">
+    <div class="alert alert-success" *ngIf="tipo.invalid && (tipo.dirty || tipo.touched)">
+      <div *ngIf="tipo.errors.required">
+          El tipo es obligatorio
+      </div>  
+      <div *ngIf="tipo.errors.maxlength">
+        No puede contener más de 30 caracteres
+      </div>
+    </div>
+    <div align="left">
+    <label for="precio">Precio:</label>
+    </div>
+    <input class="form-control" type="text" autocomplete="off" name="precio" id="precio" required 
+            [(ngModel)]="mascota.precio" #precio="ngModel">
+    <div class="alert alert-danger" *ngIf="precio.invalid && (precio.dirty || precio.touched)">
+        <div *ngIf="precio.errors.required">
+        El precio es obligatorio
+        </div>
+    </div>
+    <br/>
+    <div align="center">
+      <button class="btn btn-primary mr-3" type="submmit" [disabled]="!formu.form.valid">Guardar</button>
+      <button class="btn btn-secondary" type="reset">Borrar pantalla</button>
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  <br/>
+  <div align="center">
+  <img src="../../assets/img/Mascota_amiga6.jpg" width="500" height="300">
+  </div>

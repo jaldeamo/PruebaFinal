@@ -9,12 +9,12 @@ import { Usuarios } from './interfaces/usuarios';
 })
 export class AppComponent {
   title = 'PruebaFinal';
-  usuario:Usuarios;
+  usuario:Usuarios={username:'',password:'',tipousu:'',nombre:'',apellidos:'',telefono:''};
     
   constructor(private router:Router){}
 
   menuAdministrador()
   {
-    this.router.navigate(['menuAdministrador']);
+    this.router.navigate(['menuadmin']);
   }
 }

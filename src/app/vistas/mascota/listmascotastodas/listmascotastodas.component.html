@@ -1,1 +1,21 @@
-<p>listmascotastodas works!</p>
+<div class="container" align="center">
+    <div class="row">
+      <div class="col-6 offset-3"><br/>
+        <h3>LISTADO DE MASCOTAS</h3> 
+  <table class="table table-bordered">
+    <tr>
+        <th>Id de mascota</th>
+        <th>Nombre</th>
+        <th>Tipo de mascota</th>
+        <th>Precio</th>
+    </tr>
+    <tr *ngFor="let linea of mascota">
+        <td>{{linea.idmascota}}</td>
+        <td>{{linea.nombre}}</td>
+        <td>{{linea.tipo}}</td>
+        <td>{{linea.precio}}</td>
+    </tr>
+</table>
+  </div>
+  </div>
+  </div>
