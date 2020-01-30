@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./altamascota.component.css']
 })
 export class AltamascotaComponent implements OnInit {
-  mascota:Mascotas={nombre:'',tipo:'',precio:''};
+  //mascota:Mascotas={nombre:'',tipo:'',precio:,estadomasc:''};
+  mascota:Mascotas
 
   constructor(private router:Router, private http:MascotaService) {
    }

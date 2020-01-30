@@ -9,7 +9,7 @@ export class MascotaService {
   path:string;
 
   constructor(private http:HttpClient) {
-    this.path='http//localhost:8080/gestionmascotas'
+    this.path='http//localhost:8080/mascotas'
    }
 
    getMascotas()
@@ -20,9 +20,9 @@ export class MascotaService {
    {
      return this.http.post<Mascotas>(this.path,mascota);
    }
-   getMascotaUnica(id:number)
+   getMascotaUnica(idmascota:number)
    {
-     return this.http.get<Mascotas>(this.path+"/"+id);
+     return this.http.get<Mascotas>(this.path+"/"+idmascota);
    }
    updateMascota(mascota:Mascotas)
    {

@@ -15,12 +15,14 @@ export class BajausuarioComponent implements OnInit {
   ngOnInit() {
     this.Editar();
   }
-
+  Editar(){
+  }
+/*
   Editar(){
   let id=localStorage.getItem("username");
   this.http.getUsuarioUnico(+username).subscribe(datos=>{this.usuario=datos;})
   }
-
+*/
   bajaUsuario(usuario:Usuarios)
   {
     this.http.deleteUsuario(usuario).subscribe(datos=>{
